@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StoreInventory';
+
+  temp: any;
+
+  ngOnInit() {
+    this.temp = localStorage.getItem('temp')
+  }
 }
