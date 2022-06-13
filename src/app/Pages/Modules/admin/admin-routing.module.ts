@@ -13,6 +13,10 @@ import { ProjectCreationMasterComponent } from './adminPages/project-creation-ma
 import { ProjectCreationDashboardComponent } from './adminPages/project-creation-dashboard/project-creation-dashboard.component';
 import { AuthorizationMasterComponent } from './adminPages/authorization-master/authorization-master.component';
 import { AuthorizationDashboardComponent } from './adminPages/authorization-dashboard/authorization-dashboard.component';
+import { VendorDetailsComponent } from 'src/app/vendor-details/vendor-details.component';
+import { AuthorizationLoginDashboardComponent } from 'src/app/authorization-login-dashboard/authorization-login-dashboard.component';
+import { AuthorizationDetailsComponent } from 'src/app/authorization-details/authorization-details.component';
+import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/vendor-login-dashboard.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
@@ -27,7 +31,11 @@ const routes: Routes = [
   {path:'ProjectCreationMaster',component:ProjectCreationMasterComponent},
   {path:'ProjectCreationDashboard',component:ProjectCreationDashboardComponent},
   {path:'AuthorizationMaster',component:AuthorizationMasterComponent},
-  {path:'AuthorizationDashboard',component:AuthorizationDashboardComponent}
+  {path:'AuthorizationDashboard',component:AuthorizationDashboardComponent},
+  {path:'VendorDetails',component:VendorDetailsComponent},
+  {path:'AuthorizationLoginDashboard',component:AuthorizationLoginDashboardComponent},
+  {path:'AuthorizationDetails',component:AuthorizationDetailsComponent},
+  {path:'VendorLoginDashboard',component:VendorLoginDashboardComponent}
 
 ];
 
