@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'Admin', loadChildren: () => import('./Pages/Modules/admin/admin.module').then(m => m.AdminModule) },
+  { path: 'projectCordinator', loadChildren: () => import('./Pages/Modules/project-cordinator/project-cordinator.module').then(m => m.ProjectCordinatorModule) },
 ];
 
 @NgModule({

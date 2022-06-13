@@ -15,7 +15,7 @@ import { AuthorizationMasterComponent } from './adminPages/authorization-master/
 import { AuthorizationDashboardComponent } from './adminPages/authorization-dashboard/authorization-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  { path: '', component: CategoryDashboardComponent },
   {path:'CategoryMaster',component:CategoryMasterComponent},
   {path:'CategoryDashboard',component:CategoryDashboardComponent},
   {path:'SubCategoryMaster',component:SubCategoryMasterComponent},

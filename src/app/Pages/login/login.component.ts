@@ -21,8 +21,20 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    localStorage.setItem('RoleID', this.roleID)
-    localStorage.setItem('temp','1');
-    location.href="#/Admin"
+    if (this.roleID == 1) {
+      localStorage.setItem('RoleID', this.roleID)
+      localStorage.setItem('temp', '1');
+      location.href = "#/Admin"
+    }
+    else if (this.roleID == 2) {
+      localStorage.setItem('RoleID', this.roleID)
+      localStorage.setItem('temp', '1');
+      location.href = "#/projectCordinator"
+    }
+    else if (this.roleID == 3) {
+      localStorage.setItem('RoleID', this.roleID)
+      localStorage.setItem('temp', '1');
+      location.href = "#/projectCordinator"
+    }
   }
 }
