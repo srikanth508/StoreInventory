@@ -3,9 +3,9 @@
         <div class="col-lg-2 p-4">
             <h5 style="color: white;">Store Inventory</h5>
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-1">
             <li class="nav-item " >
-                <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="RoleID=='1'">
                   Masters
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -18,6 +18,18 @@
                 </ul>
               </li>
         </div>
+        <div class="col-lg-1">
+          <li class="nav-item " >
+              <a class="nav-link dropdown-toggle text" href="#" id="managelogin" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="RoleID=='1'">
+               Manage Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="managelogin">
+                <li><a class="dropdown-item"  routerLink="/Admin/VendorDashboard">Vendor</a></li>
+                <li><a class="dropdown-item"  routerLink="/Admin/AuthorizationDashboard">Authorization</a></li>
+              </ul>
+            </li>
+      </div>
+      <div class="col-lg-7"></div>
         <div class="col-lg-1 p-4">
             <h5 style="color: white;" (click)="logout()">Logout</h5>
         </div>

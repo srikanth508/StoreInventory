@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  RoleID:any;
+  
   constructor() { }
 
   ngOnInit(): void {
-
+     this.RoleID=localStorage.getItem('RoleID')
   }
 
   logout() {
