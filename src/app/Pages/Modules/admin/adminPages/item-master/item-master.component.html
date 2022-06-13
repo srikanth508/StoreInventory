@@ -16,41 +16,63 @@
                     <option value="1">Category 2</option>
                     <option value="2">Category 3</option>
                     <option value="3">Category 4</option>
-                  </select>
+                </select>
             </div>
             <div class="col-lg-3 margin">
                 <select class="form-control" name="Select Sub Category">
-                    <option value="1">Category 1</option>
+                    <option value="1">Select Sub Category</option>
                     <option value="2">Category 2</option>
                     <option value="3">Category 3</option>
                     <option value="4">Category 4</option>
-                  </select>
+                </select>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                    <label for="floatingInput" class="floatingLabel">Sub Category Name</label>
+                    <label for="floatingInput" class="floatingLabel">Item Number</label>
                 </div>
             </div>
+            <div class="col-lg-3">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <label for="floatingInput" class="floatingLabel">Item Name</label>
+                </div>
+            </div>
+          
+        </div> <br>
+        <div class="row">
             <div class="col-lg-3 margin">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
                         name="description"></textarea>
-                    <label for="floatingTextarea">Description</label>
+                    <label for="floatingTextarea">Item Description</label>
                 </div>
             </div>
-        </div> <br>
+            <div class="col-lg-3">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                        name="description"></textarea>
+                    <label for="floatingTextarea">JIC Job</label>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                        name="description"></textarea>
+                    <label for="floatingTextarea">JIC PO NO</label>
+                </div>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-lg-9"></div>
+            <div class="col-lg-10"></div>
             <div class="col-lg-1">
                 <button type="button" class="save">Save</button>
             </div>
             <div class="col-lg-1">
-                <button type="button" class="save">Back</button>
+                <button type="button" class="save" routerLink="/Admin/ItemDashboard">Back</button>
             </div>
         </div>
         <br>
     </div>
     <br>
 </div>
-

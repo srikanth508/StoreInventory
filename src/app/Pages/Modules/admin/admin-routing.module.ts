@@ -20,22 +20,22 @@ import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/ve
 
 const routes: Routes = [
   { path: '', component: CategoryDashboardComponent },
-  {path:'CategoryMaster',component:CategoryMasterComponent},
-  {path:'CategoryDashboard',component:CategoryDashboardComponent},
-  {path:'SubCategoryMaster',component:SubCategoryMasterComponent},
-  {path:'SubCategoryDashboard',component:SubCategoryDashboardComponent},
-  {path:'ItemDashboard',component:ItemDashboardComponent},
-  {path:'ItemMaster',component:ItemMasterComponent},
-  {path:'VendorMaster',component:VendorMasterComponent},
-  {path:'VendorDashboard',component:VendorDashboardComponent},
-  {path:'ProjectCreationMaster',component:ProjectCreationMasterComponent},
-  {path:'ProjectCreationDashboard',component:ProjectCreationDashboardComponent},
-  {path:'AuthorizationMaster',component:AuthorizationMasterComponent},
-  {path:'AuthorizationDashboard',component:AuthorizationDashboardComponent},
-  {path:'VendorDetails',component:VendorDetailsComponent},
-  {path:'AuthorizationLoginDashboard',component:AuthorizationLoginDashboardComponent},
-  {path:'AuthorizationDetails',component:AuthorizationDetailsComponent},
-  {path:'VendorLoginDashboard',component:VendorLoginDashboardComponent}
+  { path: 'CategoryMaster', component: CategoryMasterComponent },
+  { path: 'CategoryDashboard', component: CategoryDashboardComponent },
+  { path: 'SubCategoryMaster', component: SubCategoryMasterComponent },
+  { path: 'SubCategoryDashboard', component: SubCategoryDashboardComponent },
+  { path: 'ItemDashboard', component: ItemDashboardComponent },
+  { path: 'ItemMaster', component: ItemMasterComponent },
+  { path: 'VendorMaster', component: VendorMasterComponent },
+  { path: 'VendorDashboard', component: VendorDashboardComponent },
+  { path: 'ProjectCreationMaster', component: ProjectCreationMasterComponent },
+  { path: 'ProjectCreationDashboard', component: ProjectCreationDashboardComponent },
+  { path: 'AuthorizationMaster', component: AuthorizationMasterComponent },
+  { path: 'AuthorizationDashboard', component: AuthorizationDashboardComponent },
+  { path: 'VendorDetails', component: VendorDetailsComponent },
+  { path: 'AuthorizationLoginDashboard', component: AuthorizationLoginDashboardComponent },
+  { path: 'AuthorizationDetails', component: AuthorizationDetailsComponent },
+  { path: 'VendorLoginDashboard', component: VendorLoginDashboardComponent }
 
 ];
 
