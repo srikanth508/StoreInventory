@@ -5,10 +5,11 @@
         <div class="col-lg-4">
         </div>
         <div class="col-lg-4 card">
-            <br>
+            <h4 class="text-center">STORE INVENTORY</h4>
+            <br>  
             <div style="background-color: white;">
-
-             <form>
+             
+                <form>
                     <div>
                         <select class="form-control" (change)="getRoleID($event)">
                             <option value="0">Select Role</option>
@@ -21,19 +22,22 @@
                     </div>
                     <br>
                     <div class="mb-3">
-                        <input type="email" id="form2Example1" class="form-control" />
-                      <label class="form-label" for="form2Example1">Email address</label>
+                        <input type="email" id="form2Example1" class="form-control" placeholder="User Name"/>
+                        <!-- <label class="form-label" for="form2Example1">Email address</label> -->
                     </div>
                     <div class="mb-3">
-                         <input type="password" id="form2Example2" class="form-control" />
-                      <label class="form-label" for="form2Example2">Password</label>
+                        <input type="password" id="form2Example2" class="form-control" placeholder="Password" />
+                        <!-- <label class="form-label" for="form2Example2">Password</label> -->
                     </div>
                     <!-- <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
-                </form> 
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary text-center" (click)="login()">Login</button>
+                    </div>
+                   
+                </form>
             </div>
 
         </div>

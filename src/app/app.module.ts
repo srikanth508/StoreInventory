@@ -8,12 +8,14 @@ import { HeaderComponent } from './Pages/header/header.component';
 import { FooterComponent } from './Pages/footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ import { AuthorizationDetailsComponent } from 'src/app/authorization-details/aut
 import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/vendor-login-dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  { path: '', component: CategoryDashboardComponent },
   {path:'CategoryMaster',component:CategoryMasterComponent},
   {path:'CategoryDashboard',component:CategoryDashboardComponent},
   {path:'SubCategoryMaster',component:SubCategoryMasterComponent},
