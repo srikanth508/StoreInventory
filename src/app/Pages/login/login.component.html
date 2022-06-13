@@ -1,14 +1,14 @@
 <div class="container-fluid bg">
+    <br>
+    <br><br><br><br>
     <div class="row">
-        <div class="col-lg-8">
-
-        </div>
         <div class="col-lg-4">
-            <br><br><br>
-
+        </div>
+        <div class="col-lg-4 card">
+            <br>
             <div style="background-color: white;">
 
-                <form>
+             <form>
                     <div>
                         <select class="form-control" (change)="getRoleID($event)">
                             <option value="0">Select Role</option>
@@ -19,24 +19,25 @@
                             <option value="5">Ware House</option>
                         </select>
                     </div>
+                    <br>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        <input type="email" id="form2Example1" class="form-control" />
+                      <label class="form-label" for="form2Example1">Email address</label>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                         <input type="password" id="form2Example2" class="form-control" />
+                      <label class="form-label" for="form2Example2">Password</label>
                     </div>
-                    <div class="mb-3 form-check">
+                    <!-- <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
-                </form>
+                </form> 
             </div>
 
         </div>
+        <div class="col-lg-4"></div>
     </div>
 
 </div>
