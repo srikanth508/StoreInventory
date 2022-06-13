@@ -1,4 +1,14 @@
 .bg{
-    background-color: black;
+    background: linear-gradient(5deg, #1B98F5, #2827CC);
     height: 100vh;
+}
+
+.login{
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(5deg, #1B98F5, #2827CC);
+    color: white;
+    border: none;
+    width: 100px;
+    height: 50px;
 }
