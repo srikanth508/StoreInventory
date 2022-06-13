@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     else if (this.roleID == 3) {
       localStorage.setItem('RoleID', this.roleID)
       localStorage.setItem('temp', '1');
-      location.href = "#/projectCordinator"
+      location.href = "#/projectCordinator/ApproveProject"
     }
   }
 }

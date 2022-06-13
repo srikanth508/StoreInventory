@@ -12,6 +12,7 @@ import { AuthorizationLoginDashboardComponent } from './authorization-login-dash
 import { AuthorizationDetailsComponent } from './authorization-details/authorization-details.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { AuthorizationDetailsComponent } from './authorization-details/authoriza
     VendorDetailsComponent,
     AuthorizationLoginDashboardComponent,
     AuthorizationDetailsComponent,
+  
     
   ],
   imports: [
