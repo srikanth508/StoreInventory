@@ -11,6 +11,6 @@ export class AppComponent {
   temp: any;
 
   ngOnInit() {
-    this.temp = localStorage.getItem('temp')
+    this.temp = localStorage.getItem('temp');
   }
 }
