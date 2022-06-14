@@ -82,6 +82,10 @@ th {
     text-align: center;
     padding: 10px;
 }
+td{
+    text-align: center;
+    padding: 15px;
+}
 
 th:first-of-type {
     border-top-left-radius: 10px;

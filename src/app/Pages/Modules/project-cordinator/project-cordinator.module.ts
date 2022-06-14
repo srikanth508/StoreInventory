@@ -7,6 +7,7 @@ import { AddProjectIndentComponent } from '../../ProjectCordinator/add-project-i
 import { ApproveProjectComponent } from '../../ProjectCordinator/approve-project/approve-project.component';
 import { AddPoComponent } from 'src/app/StoreManager/add-po/add-po.component';
 import { AddPoDashComponent } from '../../ProjectCordinator/add-po-dash/add-po-dash.component';
+import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { AddPoDashComponent } from '../../ProjectCordinator/add-po-dash/add-po-d
     ApproveProjectComponent,
     AddPoComponent,
     AddPoDashComponent,
+    InventoryComponent,
   ],
   imports: [
     CommonModule,
