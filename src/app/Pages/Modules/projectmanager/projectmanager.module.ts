@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectmanagerRoutingModule } from './projectmanager-routing.module';
 import { ProjectmanagerComponent } from './projectmanager.component';
-import { ProjectMenuComponent } from './projectmodules/project-menu/project-menu.component';
-import { ProjectPOComponent } from './projectmodules/project-po/project-po.component';
-import { MaterialStatusReportComponent } from './projectmodules/material-status-report/material-status-report.component';
+import { ProjectMenuComponent } from './projectcomponents/project-menu/project-menu.component';
+import { ProjectPOComponent } from './projectcomponents/project-po/project-po.component';
+import { MaterialStatusReportComponent } from './projectcomponents/material-status-report/material-status-report.component';
+import { ReturnInventoryComponent } from './projectcomponents/return-inventory/return-inventory.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MaterialStatusReportComponent } from './projectmodules/material-status-
     ProjectmanagerComponent,
     ProjectMenuComponent,
     ProjectPOComponent,
-    MaterialStatusReportComponent
+    MaterialStatusReportComponent,
+    ReturnInventoryComponent
   ],
   imports: [
     CommonModule,
