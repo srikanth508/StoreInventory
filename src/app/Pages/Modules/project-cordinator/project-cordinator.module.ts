@@ -8,6 +8,8 @@ import { ApproveProjectComponent } from '../../ProjectCordinator/approve-project
 import { AddPoComponent } from 'src/app/StoreManager/add-po/add-po.component';
 import { AddPoDashComponent } from '../../ProjectCordinator/add-po-dash/add-po-dash.component';
 import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.
   ],
   imports: [
     CommonModule,
-    ProjectCordinatorRoutingModule
+    ProjectCordinatorRoutingModule,
+    NgxDropzoneModule,
+  
   ]
 })
 export class ProjectCordinatorModule { }

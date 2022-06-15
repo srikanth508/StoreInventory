@@ -10,12 +10,6 @@
     <div class="card">
         <div class="row">
             <div class="col-lg-3 ">
-                <select class="form-control">
-                    <option>Select Project</option>
-
-                </select>
-            </div>
-            <div class="col-lg-3 ">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
                     <label for="floatingInput" class="floatingLabel">Requisition Number</label>
@@ -27,6 +21,20 @@
                     <label for="floatingInput" class="floatingLabel">Reference Number</label>
                 </div>
             </div>
+            <div class="col-lg-3">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <label for="floatingInput" class="floatingLabel">Job Reference No</label>
+                </div>
+            </div>
+            <div class="col-lg-3 ">
+                <select class="form-control">
+                    <option>Select Project</option>
+
+                </select>
+            </div>
+        </div> <br>
+        <div class="row">
             <div class="col-lg-3 ">
                 <select class="form-control">
                     <option>Select Vendor</option>
@@ -47,13 +55,14 @@
                     <label for="floatingInput" class="floatingLabel">Item Number</label>
                 </div>
             </div>
-            <div class="col-lg-1">
-                <button class="save">Search</button>
-
+        </div>
+        <div class="row">
+            <div class="col-lg-10"></div>
+            <div class="col-lg-2">
+                    <button class="save">Search</button>
             </div>
-
-        </div> <br>
-
+        </div>
+        <br>
         <div class="row">
             <div class="col-lg-12">
                 <table class="table table-hover">
@@ -95,12 +104,6 @@
         </div><br>
         <div class="row">
             <div class="col-lg-3">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                    <label for="floatingInput" class="floatingLabel">Job Reference No</label>
-                </div>
-            </div>
-            <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                         style="height: 100px"></textarea>
@@ -122,19 +125,16 @@
                         style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Payment Terms</label>
                 </div>
-
             </div>
-
-        </div><br>
-        <div class="row">
             <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                         style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Delivery Terms</label>
                 </div>
-
             </div>
+        </div><br>
+        <div class="row">
             <div class="col-lg-3">
                 <select class="form-control">
                     <option>Select Transport Type</option>
@@ -150,10 +150,10 @@
                     <option>Second Level Approver</option>
                 </select>
             </div>
-
         </div>
+        <br>
         <div class="row">
-            <div class="col-lg-9"></div>
+            <div class="col-lg-10"></div>
             <div class="col-lg-1">
                 <button type="button" class="save">Save</button>
             </div>

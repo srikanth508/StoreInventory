@@ -45,5 +45,11 @@ export class LoginComponent implements OnInit {
       location.href = "#/projectCordinator/AddPoDash"
       location.reload()
     }
+    else if (this.roleID == 6) {
+      localStorage.setItem('RoleID', this.roleID)
+      localStorage.setItem('temp', '1');
+      location.href = "#/ProjectManager/ProjectMenu"
+      location.reload()
+    }
   }
 }

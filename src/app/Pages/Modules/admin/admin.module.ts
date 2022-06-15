@@ -19,6 +19,7 @@ import { VendorDetailsComponent } from 'src/app/vendor-details/vendor-details.co
 import { AuthorizationLoginDashboardComponent } from 'src/app/authorization-login-dashboard/authorization-login-dashboard.component';
 import { AuthorizationDetailsComponent } from 'src/app/authorization-details/authorization-details.component';
 import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/vendor-login-dashboard.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/ve
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    NgxDropzoneModule
   ]
 })
 export class AdminModule { }

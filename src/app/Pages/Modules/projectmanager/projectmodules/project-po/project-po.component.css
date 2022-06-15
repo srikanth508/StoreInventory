@@ -1,4 +1,12 @@
-.save1{
+.inputfield{
+    border-radius: 12px;
+    height: 46px;
+  }
+  .floatingLabel{
+    line-height: 0px;
+  }
+
+  .save1{
     border-radius: 10px;
     background-color: #51E1ED !important;
     color: #fff;

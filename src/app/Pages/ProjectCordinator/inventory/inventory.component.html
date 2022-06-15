@@ -5,12 +5,20 @@
             <h5 class="headings">Inventory Dashboard</h5>
         </div>
         <div class="col-lg-2">
-            <!-- <button class="add" routerLink="/projectCordinator/AddProjectIndent">Add</button> -->
+            <button class="add">Export Excel</button>
         </div>
     </div>
     <br>
     <div class="card">
         <div class="row">
+            <div class="col-lg-3 margin">
+                <select class="form-control" name="Project">
+                    <option value="0">Select Project</option>
+                    <option value="1">Category 2</option>
+                    <option value="2">Category 3</option>
+                    <option value="3">Category 4</option>
+                </select>
+            </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
@@ -25,22 +33,24 @@
                         <th>Item ID </th>
                         <th>Item Name</th>
                         <th>Description</th>
+                        <th>Threshold</th>
                         <th>Current Quantity</th>
                         <th>Last Ordered Date</th>
-                        <th>Last Consumed Date</th>
+                        <th>Last Consume Date</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
+                    <tr style="background-color:#e6a2a2;">
                         <td>P1I720265(P1J564100)</td>
                         <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
                         <td>A product description is the marketing copy that explains what a product is and why it's
                             information about the features and benefits of the product so they're compelled to buy</td>
-                        <td>00123213</td>
+                        <td>4</td>
+                        <td>3</td>
                         <td>12-06-2022</td>
                         <td>14-06-2022</td>
                         <td>
                             <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal"
-                            data-bs-toggle="modal" data-bs-target="#consumedquantity" >Consumed Quantity</button>
+                                data-bs-toggle="modal" data-bs-target="#consumedquantity">Consume</button>
                         </td>
                     </tr>
                     <tr>
@@ -48,19 +58,19 @@
                         <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
                         <td>A product description is the marketing copy that explains what a product is and why it's
                             information about the features and benefits of the product so they're compelled to buy</td>
-                        <td>00123213</td>
+                        <td>2</td>
+                        <td>2</td>
                         <td>12-06-2022</td>
                         <td>14-06-2022</td>
                         <td>
                             <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal"
-                            data-bs-toggle="modal" data-bs-target="#consumedquantity" >Consumed Quantity</button>
+                                data-bs-toggle="modal" data-bs-target="#consumedquantity">Consume </button>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-
 </div>
 
 
@@ -68,7 +78,7 @@
 
 <div class="modal fade" id="consumedquantity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content card">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">Items</h5>
@@ -80,40 +90,51 @@
                     <div class="col-lg-3 ">
                         <select class="form-control">
                             <option>Select Project</option>
-        
                         </select>
                     </div>
                     <div class="col-lg-3 ">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                            <input type="text" class="form-control inputfield" id="floatingInput"
+                                placeholder="Category Code">
                             <label for="floatingInput" class="floatingLabel">SIV NO.</label>
                         </div>
                     </div>
                     <div class="col-lg-3 ">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                            <input type="text" class="form-control inputfield" id="floatingInput"
+                                placeholder="Category Code">
                             <label for="floatingInput" class="floatingLabel">Consume Quantity</label>
                         </div>
                     </div>
-                    <div class="col-lg-3 ">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                            <label for="floatingInput" class="floatingLabel">Remarks</label>
+                    <div class="col-lg-3">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                name="description"></textarea>
+                            <label for="floatingTextarea">Remarks</label>
                         </div>
                     </div>
                 </div> <br>
                 <div class="row">
-                    <div class="col-lg-8"></div>
-                    <div class="col-lg-4">
-                        <button class="save1">Save</button> &nbsp; &nbsp;
-                        <button class="save1">Back</button>
+                    <div class="col-lg-3">
+                        <ngx-dropzone (change)="onSelect($event)" style="height:auto;width:100%">
+                            <ngx-dropzone-label>Add Attachment</ngx-dropzone-label>
+                            <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                            </ngx-dropzone-preview>
+                        </ngx-dropzone>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-11"></div>
+                    <div class="col-lg-1">
+                        <button class="save1">Save</button>
                     </div>
                 </div>
             </div>
-            <!-- <div class="modal-footer">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal">Close</button>
 
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

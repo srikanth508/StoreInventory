@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'Admin', loadChildren: () => import('./Pages/Modules/admin/admin.module').then(m => m.AdminModule) },
   { path: 'projectCordinator', loadChildren: () => import('./Pages/Modules/project-cordinator/project-cordinator.module').then(m => m.ProjectCordinatorModule) },
+  { path: 'ProjectManager', loadChildren: () => import('./Pages/Modules/projectmanager/projectmanager.module').then(m => m.ProjectmanagerModule) },
 ];
 
 @NgModule({

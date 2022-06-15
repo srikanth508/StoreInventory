@@ -1,8 +1,11 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-2 p-4">
-            <h5 style="color: white;">STORE INVENTORY</h5>
-        </div>
+      <div class="col-lg-1 p-3">
+        <img class="image" src="../../../assets/images/android-icon-72x72.png">&nbsp;
+      </div>
+        <!-- <div class="col-lg-2 p-4">
+            <h5 style="color: white;">DIGI INVENTORY</h5>
+        </div> -->
         <div class="col-lg-1">
             <li class="nav-item " >
                 <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="RoleID=='1'" style="padding: 0px;">
@@ -39,9 +42,20 @@
                 <li><a class="dropdown-item"  routerLink="/projectCordinator/Inventory">Inventory</a></li>
               </ul>
             </li>
+
+            <li class="nav-item " *ngIf="RoleID=='6'">
+              <a class="nav-link dropdown-toggle text" href="#" id="ProMan" role="button" data-bs-toggle="dropdown" aria-expanded="false"   style="padding: 0px;">
+             Project Manager
+              </a>
+              <ul class="dropdown-menu"  aria-labelledby="ProMan">
+                <li><a class="dropdown-item"  routerLink="/ProjectManager/ProjectMenu">Project Menu</a></li>
+                <li><a class="dropdown-item"  routerLink="/ProjectManager/ProjectPO">Project PO</a></li>
+                <li><a class="dropdown-item"  routerLink="/ProjectManager/MaterialStatusReport">Material Status Report</a></li>
+              </ul>
+            </li>
       </div>
       
-      <div class="col-lg-7"></div>
+      <div class="col-lg-8"></div>
         <div class="col-lg-1 p-4">
             <h5 style="color: white;" (click)="logout()">Logout</h5>
         </div>
