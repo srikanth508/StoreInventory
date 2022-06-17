@@ -1,7 +1,14 @@
-.bg{
-    background: linear-gradient(5deg, #1B98F5, #2827CC);
+.bg {
+    background-image: url("../../../assets/images/bgimage.jpg");
+    background-color: #cccccc;
     height: 100vh;
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+  }
+
 
 .login{
     padding: 10px;
@@ -11,4 +18,10 @@
     border: none;
     width: 100px;
     height: 50px;
+}
+
+
+.noblur
+{
+    filter: blur(0px);
 }
