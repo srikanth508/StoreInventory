@@ -12,4 +12,10 @@ export class ProjectCordinatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  open()
+  {
+    window.open("assets/images/Po.pdf","_Blank")
+  }
+
 }

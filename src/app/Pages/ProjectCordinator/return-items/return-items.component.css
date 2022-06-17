@@ -43,3 +43,17 @@
   border-radius: 12px;
   margin-top: 10px;
 }
+
+
+.accept{
+  border-radius: 10px;
+  background-color: green !important;
+  color: #fff;
+  border: 2px solid green !important;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+  min-width: 80px;
+  border-radius: 12px;
+  margin-top: 10px;
+
+}

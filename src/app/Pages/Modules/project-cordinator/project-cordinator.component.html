@@ -59,6 +59,33 @@
                         </td>
                         <td>
                             <button class="save1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Items</button>
+                            <br>
+                            <br>
+                            <button class="btn save1" (click)="open()">PO</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                       
+                        <td>Combined-cycle gas turbine (CCGT) power plant </td>
+                        <td>14-06-2022</td>
+                        <td>Amaze</td>
+                        <td>PO1293930</td>
+                        <td>Road</td>
+                        <td>Perfect Oilfield Industrial Supply LLC</td>
+                        <td>CCTV Mussafah Store</td>
+                        <td>60 Days</td>
+                        <td>Jomson
+                            <label style="color:red">Pending</label>
+                        </td>
+                        <td>Sojan
+                            <label style="color:red">Pending</label>
+                        </td>
+                        <td>
+                            <button class="save1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Items</button>
+                            <br>
+                            <br>
+                            <button class="btn save1" (click)="open()">PO</button>
                         </td>
                     </tr>
                 </table>
@@ -71,54 +98,55 @@
 
 
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content card">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Items</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Items</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>Item Code</th>
+                                <th>Item Name/Description</th>
+                                <th>Unit</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total Price</th>
+
+                            </tr>
+                            <tr>
+                                <td>P1I720265(P1J564100)</td>
+                                <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
+                                <td>RLS</td>
+                                <td>1</td>
+                                <td>2.00</td>
+                                <td>2.00</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>P1I720265(P1J564100)</td>
+                                <td>BUS COUPLER PROTECTION RELAY 7SJ82 </td>
+                                <td>RLS</td>
+                                <td>2</td>
+                                <td>2.00</td>
+                                <td>4.00</td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                </div><br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal">Close</button>
+
+            </div>
         </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-lg-12">
-                    <table class="table table-hover">
-                        <tr>
-                            <th>Item Code</th>
-                            <th>Item Name/Description</th>
-                            <th>Unit</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Total Price</th>
-                           
-                        </tr>
-                        <tr>
-                            <td>P1I720265(P1J564100)</td>
-                            <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
-                            <td>RLS</td>
-                            <td>1</td>
-                            <td>2.00</td>
-                            <td>2.00</td>
-                            
-                        </tr>
-    
-                        <tr>
-                            <td>P1I720265(P1J564100)</td>
-                            <td>BUS COUPLER PROTECTION RELAY 7SJ82 </td>
-                            <td>RLS</td>
-                            <td>2</td>
-                            <td>2.00</td>
-                            <td>4.00</td>
-                           
-                        </tr>
-                    </table>
-                </div>
-    
-            </div><br>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal">Close</button>
-       
-        </div>
-      </div>
     </div>
-  </div>
+</div>

@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-project-indent.component.css']
 })
 export class AddProjectIndentComponent implements OnInit {
-
+  showdashboard:any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  showdash()
+  {
+    this.showdashboard=1
   }
 
 }
