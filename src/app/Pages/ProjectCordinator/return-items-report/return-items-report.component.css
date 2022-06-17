@@ -1,0 +1,59 @@
+.inputfield{
+    border-radius: 12px;
+    height: 46px;
+  }
+  .floatingLabel{
+    line-height: 0px;
+  }
+
+  .save1{
+    border-radius: 10px;
+    background-color: #51E1ED !important;
+    color: #fff;
+    border: 2px solid #51E1ED !important;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    min-width: 80px;
+    border-radius: 12px;
+
+}
+
+
+.accept{
+  border-radius: 10px;
+  background-color: green !important;
+  color: #fff;
+  border: 2px solid green !important;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+  min-width: 80px;
+  border-radius: 12px;
+  margin-top: 10px;
+
+}
+
+.reject{
+  border-radius: 10px;
+  background-color: red !important;
+  color: #fff;
+  border: 2px solid red !important;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+  min-width: 80px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+
+.accept{
+  border-radius: 10px;
+  background-color: green !important;
+  color: #fff;
+  border: 2px solid green !important;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+  min-width: 80px;
+  border-radius: 12px;
+  margin-top: 10px;
+
+}
