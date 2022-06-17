@@ -6,6 +6,7 @@ import { AddProjectIndentComponent } from '../../ProjectCordinator/add-project-i
 import { ApproveProjectComponent } from '../../ProjectCordinator/approve-project/approve-project.component';
 import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.component';
 import { ProjectCordinatorComponent } from './project-cordinator.component';
+import { ReturnItemsComponent } from '../../ProjectCordinator/return-items/return-items.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'AddPo', component: AddPoComponent },
   { path: 'AddPoDash', component: AddPoDashComponent },
   { path: 'Inventory', component: InventoryComponent },
+  {path:'ReturnItems',component:ReturnItemsComponent}
 ];
 
 @NgModule({

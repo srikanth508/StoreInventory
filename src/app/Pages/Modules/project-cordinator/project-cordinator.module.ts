@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ProjectCordinatorRoutingModule } from './project-cordinator-routing.module';
 import { ProjectCordinatorComponent } from './project-cordinator.component';
 import { AddProjectIndentComponent } from '../../ProjectCordinator/add-project-indent/add-project-indent.component';
@@ -8,6 +7,7 @@ import { ApproveProjectComponent } from '../../ProjectCordinator/approve-project
 import { AddPoComponent } from 'src/app/StoreManager/add-po/add-po.component';
 import { AddPoDashComponent } from '../../ProjectCordinator/add-po-dash/add-po-dash.component';
 import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.component';
+import { ReturnItemsComponent } from '../../ProjectCordinator/return-items/return-items.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 
 
@@ -20,6 +20,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     AddPoComponent,
     AddPoDashComponent,
     InventoryComponent,
+    ReturnItemsComponent
   ],
   imports: [
     CommonModule,
