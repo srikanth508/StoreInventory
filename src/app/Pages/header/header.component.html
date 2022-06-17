@@ -1,67 +1,111 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-1 p-3">
-        <img class="image" src="assets/images/logo.png" >&nbsp;
-      </div>
-        <!-- <div class="col-lg-2 p-4">
+  <div class="row">
+    <div class="col-lg-1 p-3">
+      <img class="image" src="assets/images/logo.png">&nbsp;
+    </div>
+    <!-- <div class="col-lg-2 p-4">
             <h5 style="color: white;">DIGI INVENTORY</h5>
         </div> -->
-        <div class="col-lg-1">
-            <li class="nav-item " >
-                <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="RoleID=='1'" style="padding: 0px;">
-                  Masters
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item"  routerLink="/Admin/CategoryDashboard" >Category</a></li>
-                  <!-- <li><a class="dropdown-item"  routerLink="/Admin/SubCategoryDashboard">Sub Category</a></li> -->
-                  <li><a class="dropdown-item"  routerLink="/Admin/ItemDashboard">Item</a></li>
-                  <li><a class="dropdown-item"  routerLink="/Admin/VendorDashboard">Vendor</a></li>
-                  <li><a class="dropdown-item"  routerLink="/Admin/ProjectCreationDashboard">Project Creation</a></li>
-                  <li><a class="dropdown-item"  routerLink="/Admin/AuthorizationDashboard">Authorization</a></li>
-                </ul>
-              </li>
-        </div>
-        <div class="col-lg-1">
-          <li class="nav-item " *ngIf="RoleID=='1'" >
-              <a class="nav-link dropdown-toggle text" href="#" id="managelogin" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="padding: 0px;">
-               Manage Logins
-              </a>
-              <ul class="dropdown-menu"  aria-labelledby="managelogin">
-                <li><a class="dropdown-item"  routerLink="/Admin/VendorLoginDashboard">Vendor</a></li>
-                <li><a class="dropdown-item"  routerLink="/Admin/AuthorizationLoginDashboard">Authorization</a></li>
-              </ul>
-            </li>
+    <div class="col-lg-1">
+      <li class="nav-item ">
+        <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" *ngIf="RoleID=='1'" style="padding: 0px;">
+          Masters
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" routerLink="/Admin/CategoryDashboard">Category</a></li>
+          <!-- <li><a class="dropdown-item"  routerLink="/Admin/SubCategoryDashboard">Sub Category</a></li> -->
+          <li><a class="dropdown-item" routerLink="/Admin/ItemDashboard">Item</a></li>
+          <li><a class="dropdown-item" routerLink="/Admin/VendorDashboard">Vendor</a></li>
+          <li><a class="dropdown-item" routerLink="/Admin/ProjectCreationDashboard">Project Creation</a></li>
+          <li><a class="dropdown-item" routerLink="/Admin/AuthorizationDashboard">Authorization</a></li>
+        </ul>
+      </li>
+    </div>
+    <div class="col-lg-1">
+      <li class="nav-item " *ngIf="RoleID=='1'">
+        <a class="nav-link dropdown-toggle text" href="#" id="managelogin" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="padding: 0px;">
+          Manage Logins
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="managelogin">
+          <li><a class="dropdown-item" routerLink="/Admin/VendorLoginDashboard">Vendor</a></li>
+          <li><a class="dropdown-item" routerLink="/Admin/AuthorizationLoginDashboard">Authorization</a></li>
+        </ul>
+      </li>
 
 
-            <li class="nav-item " *ngIf="RoleID=='4'">
-              <a class="nav-link dropdown-toggle text" href="#" id="inventory" role="button" data-bs-toggle="dropdown" aria-expanded="false"   style="padding: 0px;">
-             Inventory
-              </a>
-              <ul class="dropdown-menu"  aria-labelledby="inventory">
-                <li><a class="dropdown-item"  routerLink="/projectCordinator/AddPoDash">Receive Indent</a></li>
+      <li class="nav-item " *ngIf="RoleID=='4'">
+        <a class="nav-link dropdown-toggle text" href="#" id="inventory" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="padding: 0px;">
+          Inventory
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="inventory">
+          <li><a class="dropdown-item" routerLink="/projectCordinator/Inventory">Master Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/Expiringinventory">Expiring Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/ExpiredInventory">Expired Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/UnUsedinventory">UnUsed inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/SellOffInventory">Sell of Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/ObseletaedInventory">obsolete Inventory</a></li>
+
+          <!-- <li><a class="dropdown-item"  routerLink="/projectCordinator/AddPoDash">Receive Indent</a></li>
                 <li><a class="dropdown-item"  routerLink="/projectCordinator/Inventory">Inventory</a></li>
                 <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItems">Return Items</a></li>
-                <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItemsReport">Return Items Report</a></li>
-              </ul>
-            </li>
+                <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItemsReport">Return Items Report</a></li> -->
+        </ul>
+      </li>
 
-            <li class="nav-item " *ngIf="RoleID=='6'">
-              <a class="nav-link dropdown-toggle text" href="#" id="ProMan" role="button" data-bs-toggle="dropdown" aria-expanded="false"   style="padding: 0px;">
-             Project Manager
-              </a>
-              <ul class="dropdown-menu"  aria-labelledby="ProMan">
-                <li><a class="dropdown-item"  routerLink="/ProjectManager/ProjectMenu">Project Menu</a></li>
-                <li><a class="dropdown-item"  routerLink="/ProjectManager/ProjectPO">Project PO</a></li>
-                <li><a class="dropdown-item"  routerLink="/ProjectManager/MaterialStatusReport">Material Status Report</a></li>
-                <li><a class="dropdown-item"  routerLink="/ProjectManager/ReturnInventory">Return Inventory</a></li>
-              </ul>
-            </li>
-      </div>
-      
-      <div class="col-lg-8"></div>
-        <div class="col-lg-1 p-4">
-            <h5 style="color: white;" (click)="logout()">Logout</h5>
-        </div>
+     
 
+      <li class="nav-item " *ngIf="RoleID=='6'">
+        <a class="nav-link dropdown-toggle text" href="#" id="ProMan" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="padding: 0px;">
+          Project Manager
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="ProMan">
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectMenu">Received Inward Indent</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectPO">New Indent</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/MaterialStatusReport">Material Status Report</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ReturnInventory">Return Inventory</a></li>
+        </ul>
+      </li>
     </div>
+
+
+    <div class="col-lg-1">
+
+      <li class="nav-item " *ngIf="RoleID=='4'">
+        <a class="nav-link dropdown-toggle text" href="#" id="receivbles" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="padding: 0px;">
+          Receivebles
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="receivbles">
+          <li><a class="dropdown-item"  routerLink="/projectCordinator/AddPoDash">Open PO</a></li>
+          <li><a class="dropdown-item"  routerLink="/projectCordinator/ClosedPO">Closed PO</a></li>
+                <!-- <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItems">Return Items</a></li>
+                <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItemsReport">Return Items Report</a></li> -->
+        </ul>
+      </li>
+    </div>
+    <div class="col-lg-1">
+
+      <li class="nav-item " *ngIf="RoleID=='4'">
+        <a class="nav-link dropdown-toggle text" href="#" id="receivbles" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="padding: 0px;">
+          Consumption
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="receivbles">
+          <li><a class="dropdown-item"  routerLink="/projectCordinator/ProjectIssuVoucher">Project Issue Voucher</a></li>
+                <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItems">Project Return Voucher</a></li>
+                <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItemsReport">Project Return Voucher</a></li>
+        </ul>
+      </li>
+    </div>
+
+    <div class="col-lg-6"></div>
+    <div class="col-lg-1 p-4">
+      <h5 style="color: white;" (click)="logout()">Logout</h5>
+    </div>
+
+  </div>
 </div>

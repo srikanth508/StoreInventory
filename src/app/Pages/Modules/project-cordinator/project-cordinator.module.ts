@@ -10,6 +10,13 @@ import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.
 import { ReturnItemsComponent } from '../../ProjectCordinator/return-items/return-items.component';
 import { ReturnItemsReportComponent } from '../../ProjectCordinator/return-items-report/return-items-report.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { ExpiringinventoryComponent } from 'src/app/StoreManager/Inventory/expiringinventory/expiringinventory.component';
+import { ExpiredInventoryComponent } from 'src/app/StoreManager/Inventory/expired-inventory/expired-inventory.component';
+import { UnUsedinventoryComponent } from 'src/app/StoreManager/Inventory/un-usedinventory/un-usedinventory.component';
+import { SellOffInventoryComponent } from 'src/app/StoreManager/Inventory/sell-off-inventory/sell-off-inventory.component';
+import { ObseletaedInventoryComponent } from 'src/app/StoreManager/Inventory/obseletaed-inventory/obseletaed-inventory.component';
+import { ClosedPOComponent } from 'src/app/StoreManager/PO/closed-po/closed-po.component';
+import { ProjectIssuVoucherComponent } from 'src/app/StoreManager/Cosumables/project-issu-voucher/project-issu-voucher.component';
 
 
 
@@ -23,7 +30,14 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     AddPoDashComponent,
     InventoryComponent,
     ReturnItemsComponent,
-    ReturnItemsReportComponent
+    ReturnItemsReportComponent,
+    ExpiringinventoryComponent,
+    ExpiredInventoryComponent,
+    UnUsedinventoryComponent,
+    SellOffInventoryComponent,
+    ObseletaedInventoryComponent,
+    ClosedPOComponent,
+    ProjectIssuVoucherComponent,
   ],
   imports: [
     CommonModule,
