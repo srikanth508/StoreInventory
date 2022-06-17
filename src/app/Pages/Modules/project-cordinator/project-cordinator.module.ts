@@ -8,7 +8,9 @@ import { AddPoComponent } from 'src/app/StoreManager/add-po/add-po.component';
 import { AddPoDashComponent } from '../../ProjectCordinator/add-po-dash/add-po-dash.component';
 import { InventoryComponent } from '../../ProjectCordinator/inventory/inventory.component';
 import { ReturnItemsComponent } from '../../ProjectCordinator/return-items/return-items.component';
+import { ReturnItemsReportComponent } from '../../ProjectCordinator/return-items-report/return-items-report.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+
 
 
 
@@ -20,7 +22,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     AddPoComponent,
     AddPoDashComponent,
     InventoryComponent,
-    ReturnItemsComponent
+    ReturnItemsComponent,
+    ReturnItemsReportComponent
   ],
   imports: [
     CommonModule,

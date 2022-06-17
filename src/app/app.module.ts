@@ -13,6 +13,7 @@ import { FooterComponent } from './Pages/footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
