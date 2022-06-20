@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
      this.RoleID=localStorage.getItem('RoleID')
   }
 
+
   logout() {
-   
     localStorage.clear();
     sessionStorage.clear()
     location.href = "#/login";
