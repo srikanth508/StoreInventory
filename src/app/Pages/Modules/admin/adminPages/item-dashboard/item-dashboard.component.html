@@ -1,11 +1,17 @@
 <div class="container-fluid">
     <br>
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
             <h5 class="headings">Item Dashboard</h5>
         </div>
         <div class="col-lg-2">
-            <button class="add"  routerLink="/Admin/ItemMaster">Add</button>
+            <button class="add" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Import Excel</button>
+        </div>
+        <div class="col-lg-1">
+            <button class="add" routerLink="/Admin/ItemMaster">Add</button>&nbsp;&nbsp;
+        </div>
+        <div class="col-lg-1">
+            <button class="add">Print</button>
         </div>
     </div>
     <br>
@@ -14,93 +20,134 @@
             <div class="col-lg-12 tableoverflow">
                 <table class="table table-hover">
                     <tr>
-                      <th>Category</th>
-                      <th>Item No</th>
-                      <th>Item Name</th>
-                      <th>Unit</th>
-                      <th>Price</th>
-                      <th>Actions</th>
+                        <th>Category</th>
+                        <th>Part No.</th>
+                        <th>Item No</th>
+                        <th>Item Name</th>
+                        <th>Unit</th>
+                        <th>Price</th>
+                        <th>Actions</th>
                     </tr>
                     <tr>
                         <td>Electric</td>
-                        <td>010180070012</td>
-                        <td>Wires : [1SQM GREY]</td>
+                        <td>EQ72-A/M 150 /1A</td>
+                        <td>P1J564102</td>
+                        <td>GENERATOR INCOMER PROTECTION RELAY 7SJ82</td>
                         <td>RLS</td>
                         <td>100 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electric</td>
-                        <td>010180070012</td>
-                        <td>Wires : [1SQM RED]</td>
+                        <td>ZIS 14.10VC-1600/1A-45VA</td>
+                        <td>P1J564103</td>
+                        <td>BUS COUPLER PROTECTION RELAY 7SJ82</td>
                         <td>RLS</td>
                         <td>200 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electric</td>
-                        <td>010180070012</td>
-                        <td>Wires : [1SQM BLACK]</td>
+                        <td>18083</td>
+                        <td>P1J564104</td>
+                        <td>LOCKOUT RELAY,110V DC</td>
                         <td>RLS</td>
                         <td>400 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electronic</td>
-                        <td>0103070040003</td>
-                        <td>Ferrules;[SLEEVES,WHITE 1SQM]</td>
+                        <td>HVIR75TYPE20</td>
+                        <td>P1J564105</td>
+                        <td>TRIP UNIT SUPERVISION RELAY 110V DC</td>
                         <td>RLS</td>
                         <td>300 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electronic</td>
-                        <td>0103130030021</td>
-                        <td>Rail,Base DIN;[35MM 2MTR]</td>
+                        <td>LV430411</td>
+                        <td>P1J564106</td>
+                        <td>TEST BLOCK</td>
                         <td>NOS</td>
                         <td>400 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electronic</td>
-                        <td>0110032250003</td>
-                        <td>Wrap;[SPIRAL-WHITE 1"-24MM]</td>
+                        <td>LV429371</td>
+                        <td>P1J564107</td>
+                        <td>GENERATOR INCOMER PROTECTION RELAY 7SJ82</td>
                         <td>MTR</td>
                         <td>200 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electronic</td>
-                        <td>0110032250003</td>
-                        <td>Wrap;[SPIRAL-WHITE 1/2"-12MM]</td>
+                        <td>NSYTRAAB35</td>
+                        <td>P1J564108</td>
+                        <td>ESCUTCHEON FOR DRAWOUT BREAKER</td>
                         <td>
-                            MTR  
+                            MTR
                         </td>
                         <td>100 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                     <tr>
                         <td>Electronic</td>
-                        <td>0110032250003</td>
-                        <td>Wrap;[SPIRAL-WHITE 1-1/2"-12MM]</td>
+                        <td>RXM4AB2P7</td>
+                        <td>P1J564109</td>
+                        <td>ZIGLER</td>
                         <td>MTR</td>
                         <td>400 AED</td>
                         <td>
-                            <button class="save1">Edit</button><br> &nbsp;
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Electronic</td>
+                        <td>BVW2MFBLCOMP</td>
+                        <td>P1J564110</td>
+                        <td>AMMETER-AC-72X72-150/1A</td>
+                        <td>MTR</td>
+                        <td>400 AED</td>
+                        <td>
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Electric</td>
+                        <td>DEV18124</td>
+                        <td>P1J564111</td>
+                        <td>Z-CT 1600/1A CL1 15VA ZIS 14.10VC</td>
+                        <td>MTR</td>
+                        <td>400 AED</td>
+                        <td>
+                            <input type="checkbox">&nbsp;&nbsp;
+                            <!-- <button class="save1">Edit</button><br> &nbsp; -->
                         </td>
                     </tr>
                 </table>
@@ -108,4 +155,30 @@
         </div>
     </div>
 
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Import Excel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-floating">
+                            <input type="file">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary add" data-bs-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+    </div>
 </div>

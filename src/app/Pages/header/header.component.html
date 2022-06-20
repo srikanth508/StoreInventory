@@ -7,9 +7,9 @@
             <h5 style="color: white;">DIGI INVENTORY</h5>
         </div> -->
     <div class="col-lg-1">
-      <li class="nav-item ">
+      <li class="nav-item"  *ngIf="RoleID=='1'">
         <a class="nav-link dropdown-toggle text" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false" *ngIf="RoleID=='1'" style="padding: 0px;">
+          aria-expanded="false" style="padding: 0px;">
           Masters
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -23,7 +23,7 @@
       </li>
     </div>
     <div class="col-lg-1">
-      <li class="nav-item " *ngIf="RoleID=='1'">
+      <li class="nav-item"  *ngIf="RoleID=='1'">
         <a class="nav-link dropdown-toggle text" href="#" id="managelogin" role="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="padding: 0px;">
           Manage Logins
@@ -33,9 +33,9 @@
           <li><a class="dropdown-item" routerLink="/Admin/AuthorizationLoginDashboard">Authorization</a></li>
         </ul>
       </li>
-
-
-      <li class="nav-item " *ngIf="RoleID=='4'">
+     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <div class="col-lg-1">
+      <li class="nav-item" *ngIf="RoleID=='4' || RoleID=='6'||RoleID=='1'">
         <a class="nav-link dropdown-toggle text" href="#" id="inventory" role="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="padding: 0px;">
           Inventory
@@ -46,7 +46,7 @@
           <li><a class="dropdown-item" routerLink="/projectCordinator/ExpiredInventory">Expired Inventory</a></li>
           <li><a class="dropdown-item" routerLink="/projectCordinator/UnUsedinventory">UnUsed inventory</a></li>
           <li><a class="dropdown-item" routerLink="/projectCordinator/SellOffInventory">Sell of Inventory</a></li>
-          <li><a class="dropdown-item" routerLink="/projectCordinator/ObseletaedInventory">obsolete Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/projectCordinator/ObseletaedInventory">Obsolete Inventory</a></li>
 
           <!-- <li><a class="dropdown-item"  routerLink="/projectCordinator/AddPoDash">Receive Indent</a></li>
                 <li><a class="dropdown-item"  routerLink="/projectCordinator/Inventory">Inventory</a></li>
@@ -54,27 +54,25 @@
                 <li><a class="dropdown-item"  routerLink="/projectCordinator/ReturnItemsReport">Return Items Report</a></li> -->
         </ul>
       </li>
-
-     
-
-      <li class="nav-item " *ngIf="RoleID=='6'">
+     </div>
+    <div class="col-lg-1">
+      <li class="nav-item"  *ngIf="RoleID=='6'" >
         <a class="nav-link dropdown-toggle text" href="#" id="ProMan" role="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="padding: 0px;">
           Project Manager
         </a>
         <ul class="dropdown-menu" aria-labelledby="ProMan">
-          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectMenu">Received Inward Indent</a></li>
-          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectPO">New Indent</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectMenu">Received Materials</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ProjectPO">New Voucher request</a></li>
           <li><a class="dropdown-item" routerLink="/ProjectManager/MaterialStatusReport">Material Status Report</a></li>
-          <li><a class="dropdown-item" routerLink="/ProjectManager/ReturnInventory">Return Inventory</a></li>
+          <li><a class="dropdown-item" routerLink="/ProjectManager/ReturnInventory">Return Voucher</a></li>
         </ul>
       </li>
     </div>
 
 
     <div class="col-lg-1">
-
-      <li class="nav-item " *ngIf="RoleID=='4'">
+      <li class="nav-item"  *ngIf="RoleID=='4'" >
         <a class="nav-link dropdown-toggle text" href="#" id="receivbles" role="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="padding: 0px;">
           Receivebles
@@ -87,9 +85,9 @@
         </ul>
       </li>
     </div>
-    <div class="col-lg-1">
 
-      <li class="nav-item " *ngIf="RoleID=='4'">
+    <div class="col-lg-1">
+      <li class="nav-item" *ngIf="RoleID=='4'" >
         <a class="nav-link dropdown-toggle text" href="#" id="receivbles" role="button" data-bs-toggle="dropdown"
           aria-expanded="false" style="padding: 0px;">
           Consumption
@@ -102,7 +100,7 @@
       </li>
     </div>
 
-    <div class="col-lg-6"></div>
+    <div class="col-lg-3"></div>
     <div class="col-lg-1 p-4">
       <h5 style="color: white;" (click)="logout()">Logout</h5>
     </div>
