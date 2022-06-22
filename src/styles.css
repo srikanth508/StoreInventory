@@ -169,3 +169,8 @@ tr:nth-child(even) {
   .floatingLabel{
     line-height: 0px;
   }
+
+  .image{
+    height:auto;
+    width:37px;
+  }
