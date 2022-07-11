@@ -17,6 +17,13 @@ import { SellOffInventoryComponent } from 'src/app/StoreManager/Inventory/sell-o
 import { ObseletaedInventoryComponent } from 'src/app/StoreManager/Inventory/obseletaed-inventory/obseletaed-inventory.component';
 import { ClosedPOComponent } from 'src/app/StoreManager/PO/closed-po/closed-po.component';
 import { ProjectIssuVoucherComponent } from 'src/app/StoreManager/Cosumables/project-issu-voucher/project-issu-voucher.component';
+import { PurchasemanagerDashComponent } from '../../ProjectCordinator/purchasemanager-dash/purchasemanager-dash.component';
+import { ProjectManagerDashComponent } from '../../ProjectCordinator/project-manager-dash/project-manager-dash.component';
+import { StoredashComponent } from 'src/app/StoreManager/storedash/storedash.component';
+import { DamagedItemsComponent } from 'src/app/StoreManager/damaged-items/damaged-items.component';
+import { ProjectPosComponent } from 'src/app/StoreManager/project-pos/project-pos.component';
+import { NewprojectindentpmdashComponent } from '../../ProjectCordinator/newprojectindentpmdash/newprojectindentpmdash.component';
+import { NewprojectindentpmComponent } from '../../ProjectCordinator/newprojectindentpm/newprojectindentpm.component';
 import { SharedModule } from '../shared/shared.module';
 
 
@@ -39,6 +46,13 @@ import { SharedModule } from '../shared/shared.module';
     ObseletaedInventoryComponent,
     ClosedPOComponent,
     ProjectIssuVoucherComponent,
+    PurchasemanagerDashComponent,
+    ProjectManagerDashComponent,
+    StoredashComponent,
+    DamagedItemsComponent,
+    ProjectPosComponent,
+    NewprojectindentpmComponent,
+    NewprojectindentpmdashComponent,
   ],
   imports: [
     CommonModule,

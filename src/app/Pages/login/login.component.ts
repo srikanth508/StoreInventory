@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   getRoleID(even: any) {
+    debugger
     this.roleID = even.target.value;
   }
 
@@ -22,9 +23,10 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.roleID == 1) {
+      
       localStorage.setItem('RoleID', this.roleID)
       sessionStorage.setItem('temp', '1');
-      location.href = "#/Admin"
+      location.href = "#/projectCordinator/Storedash"
       setTimeout(()=>{
         window.location.reload();
       },1000)
@@ -33,7 +35,7 @@ export class LoginComponent implements OnInit {
     else if (this.roleID == 2) {
       localStorage.setItem('RoleID', this.roleID)
       sessionStorage.setItem('temp', '1');
-      location.href = "#/projectCordinator"
+      location.href = "#/projectCordinator/PurchasemanagerDash"
       setTimeout(()=>{
         window.location.reload();
       },1000)
@@ -49,7 +51,7 @@ export class LoginComponent implements OnInit {
     else if (this.roleID == 4) {
       localStorage.setItem('RoleID', this.roleID)
       sessionStorage.setItem('temp', '1');
-      location.href = "#/projectCordinator/AddPoDash"
+      location.href = "#/projectCordinator/Storedash"
       setTimeout(()=>{
         window.location.reload();
       },1000)
@@ -57,7 +59,7 @@ export class LoginComponent implements OnInit {
     else if (this.roleID == 6) {
       localStorage.setItem('RoleID', this.roleID)
       sessionStorage.setItem('temp', '1');
-      location.href = "#/ProjectManager/ProjectMenu"
+      location.href = "#/projectCordinator/Storedash"
       setTimeout(()=>{
         window.location.reload();
       },1000)
