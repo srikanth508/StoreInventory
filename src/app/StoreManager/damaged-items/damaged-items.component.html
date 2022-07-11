@@ -1,0 +1,232 @@
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-lg-9">
+            <h5 class="headings">Damaged Items</h5>
+        </div>
+        <div class="col-lg-2">
+            <button class="add">Export Excel</button>
+        </div>
+        <div class="col-lg-1">
+            <button class="add">Print</button>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="row">
+            <div class="col-lg-3">
+                <select class="form-control" name="Select Project">
+                    <option value="0">Select Project</option>
+                    <option value="1">EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</option>
+                    <option value="2">Combined-cycle gas turbine (CCGT) power plant</option>
+                    <option value="3">Integrated solar and wind power generation</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <label for="floatingInput" class="floatingLabel">Search</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <label style="float: right;">Count : 2</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 tableoverflow">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Part No.</th>
+                        <!-- <th>Item ID </th> -->
+                        <th>Item Name</th>
+                        <!-- <th>Current Quantity</th>
+                        <th>Threshold</th> -->
+                        <!-- <th>Purchase Date</th>
+                        <th>Last Consume Date</th>
+                        <th>Warrenty Expire Date</th> -->
+                        <th>Location</th>
+                        <th>Warehouse Name</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    <tr>
+                        <td>KEYHVIR75T20</td>
+                        <!-- <td>P1J564123</td> -->
+                        <td>NEW KEY INSTALL TOOL</td>
+                        <!-- <td>15</td>
+                        <td>10</td> -->
+                        <!-- <td>09-06-2022</td>
+                        <td>11-06-2022</td>
+                        <td>20-06-2023</td> -->
+                        <td>Banglore</td>
+                        <td>Store house</td>
+                        <td>
+                            <button class="save1" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">View
+                                Details</button>
+                        </td>
+                        <!-- <td>
+                            <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#consumedquantity">Consume </button>
+                        </td> -->
+                    </tr>
+                    <tr>
+                        <td>XA2EA21</td>
+                        <!-- <td>P1J564125</td> -->
+                        <td>PB FLUSH,BLACK,1NO</td>
+                        <!-- <td>9</td>
+                        <td>13</td> -->
+                        <!-- <td>11-06-2022</td>
+                        <td>10-06-2022</td>
+                        <td>20-06-2023</td> -->
+                        <td>Banglore</td>
+                        <td>Store house</td>
+                        <td>
+                            <button class="save1" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">View
+                                Details</button>
+                        </td>
+                        <!-- <td>
+                            <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal"
+                                data-bs-toggle="modal" data-bs-target="#consumedquantity">Consume </button>
+                        </td> -->
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="consumedquantity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Items</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <select class="form-control" name="Select Project">
+                            <option value="0">Select Project</option>
+                            <option value="1">EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</option>
+                            <option value="2">Combined-cycle gas turbine (CCGT) power plant</option>
+                            <option value="3">Integrated solar and wind power generation</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control inputfield" id="floatingInput"
+                                placeholder="Category Code">
+                            <label for="floatingInput" class="floatingLabel">SIV NO.</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control inputfield" id="floatingInput"
+                                placeholder="Category Code">
+                            <label for="floatingInput" class="floatingLabel">Consume Quantity</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                style="    height: 100px;" name="description"></textarea>
+                            <label for="floatingTextarea">Remarks</label>
+                        </div>
+                    </div>
+                </div> <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ngx-dropzone (change)="onSelect($event)" style="height:auto;width:100%">
+                            <ngx-dropzone-label>Add Attachment</ngx-dropzone-label>
+                            <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                            </ngx-dropzone-preview>
+                        </ngx-dropzone>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-11"></div>
+                    <div class="col-lg-1">
+                        <button class="save1">Save</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary save1" data-bs-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Item Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 tableoverflow">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>PO No.</th>
+                                <th>Project No</th>
+                                <th>Part No.</th>
+                                <th>Description</th>
+                                <th>Manufacturer Name</th>
+                                <th>Current Qty</th>
+                                <th>Reserved Qty</th>
+                                <th>Balance/Spare Qty</th>
+                                <th>Purchase Date</th>
+                                <th>Last Consume Date</th>
+                                <th>Warrenty Expire Date</th>
+                                <th>Delivery No</th>
+                            </tr>
+                            <tr>
+                                <td>PO202206001</td>
+                                <td>001121</td>
+                                <td>NSYTRV42</td>
+                                <td>SCREW TERMINAL, 2PTS, 4MM² GREY</td>
+                                <td>Motorola Mobility</td>
+                                <td>20</td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>11-06-2022</td>
+                                <td>10-06-2022</td>
+                                <td>20-06-2023</td>
+                                <td>D2022001</td>
+                            </tr>
+
+                            <tr>
+                                <td>PO202206002</td>
+                                <td>001122</td>
+                                <td>NSYTRV42</td>
+                                <td>SCREW TERMINAL, 2PTS, 4MM² GREY</td>
+                                <td>Motorola Mobility</td>
+                                <td>15</td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>12-06-2022</td>
+                                <td>10-06-2022</td>
+                                <td>30-08-2023</td>
+                                <td>D2022002</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="save1" data-bs-dismiss="modal">Close</button> -->
+            </div>
+        </div>
+    </div>
+</div>

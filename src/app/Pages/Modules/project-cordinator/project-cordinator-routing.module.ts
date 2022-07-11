@@ -15,6 +15,13 @@ import { SellOffInventoryComponent } from 'src/app/StoreManager/Inventory/sell-o
 import { ObseletaedInventoryComponent } from 'src/app/StoreManager/Inventory/obseletaed-inventory/obseletaed-inventory.component';
 import { ClosedPOComponent } from 'src/app/StoreManager/PO/closed-po/closed-po.component';
 import { ProjectIssuVoucherComponent } from 'src/app/StoreManager/Cosumables/project-issu-voucher/project-issu-voucher.component';
+import { PurchasemanagerDashComponent } from '../../ProjectCordinator/purchasemanager-dash/purchasemanager-dash.component';
+import { ProjectManagerDashComponent } from '../../ProjectCordinator/project-manager-dash/project-manager-dash.component';
+import { StoredashComponent } from 'src/app/StoreManager/storedash/storedash.component';
+import { DamagedItemsComponent } from 'src/app/StoreManager/damaged-items/damaged-items.component';
+import { ProjectPosComponent } from 'src/app/StoreManager/project-pos/project-pos.component';
+import { NewprojectindentpmComponent } from '../../ProjectCordinator/newprojectindentpm/newprojectindentpm.component';
+import { NewprojectindentpmdashComponent } from '../../ProjectCordinator/newprojectindentpmdash/newprojectindentpmdash.component';
 
 const routes: Routes = [
   { path: '', component: ProjectCordinatorComponent },
@@ -33,7 +40,17 @@ const routes: Routes = [
   { path: 'ObseletaedInventory', component: ObseletaedInventoryComponent },
   { path: 'ClosedPO', component: ClosedPOComponent },
   { path: 'ProjectIssuVoucher', component: ProjectIssuVoucherComponent },
+  { path: 'PurchasemanagerDash', component: PurchasemanagerDashComponent },
+  { path: 'ProjectManagerDash', component: ProjectManagerDashComponent },
+  { path: 'Storedash', component: StoredashComponent },
+  { path: 'DamagedItems', component: DamagedItemsComponent },
+  { path: 'ProjectPos', component: ProjectPosComponent },
+
+  { path: 'Newprojectindent', component: NewprojectindentpmComponent },
+  { path: 'Newprojectindentpmdash', component: NewprojectindentpmdashComponent },
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

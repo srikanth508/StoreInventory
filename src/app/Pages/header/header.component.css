@@ -6,3 +6,34 @@
     width:50px;
     height:auto;
 }
+
+.notificationCount {
+    float: right;
+    margin: 15px -62px 10px 8px;
+    font-weight: 800;
+    color: green;
+  }
+  
+  
+  .notification {
+  
+    color: white;
+    text-decoration: none;
+    position: relative;
+    border-radius: 2px;
+    /* top: 26px; */
+    float: right;
+  
+  }
+  
+  
+  .notification .badge {
+    position: absolute;
+    top: -9px;
+    right: -7px;
+    /* padding: 8px 10px; */
+    border-radius: 52%;
+    background-color: red;
+    color: white;
+  }
+  

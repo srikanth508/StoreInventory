@@ -1,0 +1,10 @@
+.save1{
+    border-radius: 10px;
+    background-color: #51E1ED !important;
+    color: #fff;
+    border: 2px solid #51E1ED !important;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    min-width: 80px;
+    border-radius: 12px;
+}
