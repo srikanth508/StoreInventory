@@ -15,10 +15,20 @@
                 <table class="table table-hover">
                     <tr>
                        <th>Authorization Name</th>
-                       <th>Deaprtment</th>
-                       <th>User Name</th>
+                       <th>Department</th>
+                       <th>UserName</th>
                        <th>Password</th>
                        <th>Actions</th>
+                    </tr>
+                    <tr *ngFor="let details of authorizationlist">
+                      <td>{{details.authorizationName}}</td>
+                      <td>{{details.depatment}}</td>
+                      <td>{{details.userName}}</td>
+                      <td>{{details.password}}</td>
+                      <td>
+                        <button class="save" (click)="edit(details.id)">Edit</button>&nbsp;
+                        <button class="save" (click)="delete(details.id)">Delete</button>
+                      </td>
                     </tr>
                 </table>
             </div>

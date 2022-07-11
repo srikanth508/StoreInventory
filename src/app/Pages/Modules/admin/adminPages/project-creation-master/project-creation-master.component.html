@@ -12,26 +12,29 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Project Number"
+                    [(ngModel)]="projectNumber" name="projectNumber">  
                     <label for="floatingInput" class="floatingLabel">Project Number</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="ProjectName"
+                    [(ngModel)]="projectName" name="projectName">
                     <label for="floatingInput" class="floatingLabel">Project Name</label>
                 </div>
             </div>   
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="ClientName"
+                    [(ngModel)]="clientName" name="clientName">
                     <label for="floatingInput" class="floatingLabel">Client Name</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        name="description"></textarea>
+                      [(ngModel)]="description"  name="description"></textarea>
                     <label for="floatingTextarea">Description</label>
                 </div>
             </div>
@@ -40,7 +43,8 @@
         <div class="row">
             <div class="col-lg-10"></div>
             <div class="col-lg-1">
-                <button type="button" class="save">Save</button>
+                <button type="button" class="save" (click)="insertdetails()" *ngIf="id==undefined">Save</button>
+                <button type="button" class="save" (click)="updatedetails()" *ngIf="id!=undefined">Update</button>
             </div>
             <div class="col-lg-1">
                 <button type="button" class="save" routerLink="/Admin/ProjectCreationDashboard">Back</button>

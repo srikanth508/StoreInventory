@@ -21,20 +21,27 @@ import { VendorLoginDashboardComponent } from 'src/app/vendor-login-dashboard/ve
 const routes: Routes = [
   { path: '', component: CategoryDashboardComponent },
   { path: 'CategoryMaster', component: CategoryMasterComponent },
+  { path: 'CategoryMaster/:id', component: CategoryMasterComponent },
   { path: 'CategoryDashboard', component: CategoryDashboardComponent },
   { path: 'SubCategoryMaster', component: SubCategoryMasterComponent },
   { path: 'SubCategoryDashboard', component: SubCategoryDashboardComponent },
   { path: 'ItemDashboard', component: ItemDashboardComponent },
   { path: 'ItemMaster', component: ItemMasterComponent },
+  { path: 'ItemMaster/:id', component: ItemMasterComponent },
   { path: 'VendorMaster', component: VendorMasterComponent },
+  { path: 'VendorMaster/:id', component: VendorMasterComponent },
   { path: 'VendorDashboard', component: VendorDashboardComponent },
   { path: 'ProjectCreationMaster', component: ProjectCreationMasterComponent },
+  { path: 'ProjectCreationMaster/:id', component: ProjectCreationMasterComponent },
   { path: 'ProjectCreationDashboard', component: ProjectCreationDashboardComponent },
   { path: 'AuthorizationMaster', component: AuthorizationMasterComponent },
+  { path: 'AuthorizationMaster/:id', component: AuthorizationMasterComponent },
   { path: 'AuthorizationDashboard', component: AuthorizationDashboardComponent },
   { path: 'VendorDetails', component: VendorDetailsComponent },
+  { path: 'VendorDetails/:id', component: VendorDetailsComponent },
   { path: 'AuthorizationLoginDashboard', component: AuthorizationLoginDashboardComponent },
   { path: 'AuthorizationDetails', component: AuthorizationDetailsComponent },
+  { path: 'AuthorizationDetails/:id', component: AuthorizationDetailsComponent },
   { path: 'VendorLoginDashboard', component: VendorLoginDashboardComponent }
 
 ];

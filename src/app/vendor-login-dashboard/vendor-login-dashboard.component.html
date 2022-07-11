@@ -19,6 +19,15 @@
                        <th>Password</th>
                        <th>Actions</th>
                     </tr>
+                    <tr *ngFor="let details of vendorlist">
+                        <td>{{details.vendorName}}</td>
+                        <td>{{details.userName}}</td>
+                        <td>{{details.password}}</td>
+                        <td>
+                            <button class="save" (click)="edit(details.id)">Edit</button>&nbsp;
+                            <button class="save">Delete</button>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

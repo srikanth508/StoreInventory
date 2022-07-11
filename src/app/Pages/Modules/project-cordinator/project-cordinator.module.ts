@@ -17,6 +17,7 @@ import { SellOffInventoryComponent } from 'src/app/StoreManager/Inventory/sell-o
 import { ObseletaedInventoryComponent } from 'src/app/StoreManager/Inventory/obseletaed-inventory/obseletaed-inventory.component';
 import { ClosedPOComponent } from 'src/app/StoreManager/PO/closed-po/closed-po.component';
 import { ProjectIssuVoucherComponent } from 'src/app/StoreManager/Cosumables/project-issu-voucher/project-issu-voucher.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -43,6 +44,7 @@ import { ProjectIssuVoucherComponent } from 'src/app/StoreManager/Cosumables/pro
     CommonModule,
     ProjectCordinatorRoutingModule,
     NgxDropzoneModule,
+    SharedModule
   
   ]
 })

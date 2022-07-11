@@ -11,29 +11,32 @@
         <div class="row">
             <div class="col-lg-3 ">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Requisition Number"
+                    [(ngModel)]="requisitionNumber" name="requisitionNumber">
                     <label for="floatingInput" class="floatingLabel">Requisition Number</label>
                 </div>
             </div>
-            <div class="col-lg-3 ">
+            <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Reference Number"
+                    [(ngModel)]="referenceNumber" name="referenceNumber">
                     <label for="floatingInput" class="floatingLabel">Reference Number</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Job Reference No"
+                    [(ngModel)]="jobReferenceNumber" name="jobReferenceNumber">
                     <label for="floatingInput" class="floatingLabel">Job Reference No</label>
                 </div>
             </div>
             <div class="col-lg-3 ">
-                <select class="form-control">
+                <select class="form-control" (change)="GetProjectID($event)" [(ngModel)]="projectid" name="projectid">
                     <option value="0">Select Project</option>
-                    <option value="1">EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</option>
+                    <option *ngFor="let details of projectlist" value="{{details.id}}">{{details.projectName}}</option>
+                    <!-- <option value="1">EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</option>
                     <option value="2">Combined-cycle gas turbine (CCGT) power plant</option>
-                    <option value="3">Integrated solar and wind power generation</option>
-
+                    <option value="3">Integrated solar and wind power generation</option> -->
                 </select>
             </div>
         </div> <br>
@@ -47,14 +50,15 @@
                 </select>
             </div> -->
             <div class="col-lg-3">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" [(ngModel)]="date" name="date">
             </div>
 
             <div class="col-lg-3">
-                <select class="form-control">
-                    <option>Select Category</option>
-                   <option>Electric</option>
-                   <option>Electronic</option>
+                <select class="form-control" (change)="GetcategoryID($event)" [(ngModel)]="categoryid" name="categoryid" >
+                    <option value="0">Select Category</option>
+                    <option *ngFor="let details of categorylist" value="{{details.id}}">{{details.categoryName}}</option>
+                   <!-- <option>Electric</option>
+                   <option>Electronic</option> -->
                 </select>
             </div>
             <div class="col-lg-3 ">
@@ -73,7 +77,6 @@
                     <input type="text" class="form-control" placeholder="Quantity" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <span class="input-group-text search" id="basic-addon2" >Add</span>
                   </div>
-
             </div>
         </div>
         <!-- <div class="row">
@@ -89,35 +92,26 @@
                     <tr>
                         <th>Item Code</th>
                         <th>Item Name/Description</th>
-                        <!-- <th>Unit</th> -->
                         <th>Quantity</th>
-                        <!-- <th>Unit Price</th>
-                        <th>Total Price</th> -->
-                        <!-- <th>Actions</th> -->
                     </tr>
-                    <tr>
+                    <tr *ngFor="let details of itemlist">
+                        <td>{{details.itemNumber}}</td>
+                        <td>{{details.itemName}}</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="Quantity">
+                        </td>
+                    </tr>
+                    <!-- <tr>
                         <td>P1I720265(P1J564100)</td>
                         <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
-                        <!-- <td>RLS</td> -->
                         <td>1</td>
-                        <!-- <td>2.00</td>
-                        <td>2.00</td> -->
-                        <!-- <td>
-                            <button class="save1" (click)="showdash()">Add</button>
-                        </td> -->
                     </tr>
 
                     <tr>
                         <td>P1I720265(P1J564100)</td>
                         <td>BUS COUPLER PROTECTION RELAY 7SJ82 </td>
-                        <!-- <td>RLS</td> -->
                         <td>2</td>
-                        <!-- <td>2.00</td>
-                        <td>4.00</td> -->
-                        <!-- <td>
-                            <button class="save1"  (click)="showdash()">Add</button>
-                        </td> -->
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
 
@@ -126,10 +120,9 @@
             <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                        style="height: 100px"></textarea>
+                        style="height: 100px" [(ngModel)]="generalTerms" name="generalTerms"></textarea>
                     <label for="floatingTextarea2">General Terms</label>
                 </div>
-
             </div>
             <!-- <div class="col-lg-3">
                 <div class="form-floating">
@@ -184,7 +177,7 @@
         <div class="row">
             <div class="col-lg-10"></div>
             <div class="col-lg-1">
-                <button type="button" class="save">Save</button>
+                <button type="button" class="save" (click)="insertdetails()">Save</button>
             </div>
             <div class="col-lg-1">
                 <button type="button" class="save" routerLink="/projectCordinator">Back</button>

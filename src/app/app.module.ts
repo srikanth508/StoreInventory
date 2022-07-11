@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { HeaderComponent } from './Pages/header/header.component';
 import { FooterComponent } from './Pages/footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -33,7 +34,9 @@ import { FooterComponent } from './Pages/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

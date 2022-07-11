@@ -10,50 +10,52 @@
     <div class="card">
         <div class="row">
             <div class="col-lg-3 margin">
-                <select class="form-control" name="Select Category">
+                <select class="form-control" (change)="GetCategortID($event)" [(ngModel)]="categoryid" >
                     <option value="0">Select Category</option>
-                    <option value="1">Electric</option>
-                    <option value="1">Electronic</option>
+                    <option *ngFor="let details of categorylist" value="{{details.id}}">{{details.categoryName}}</option>
                 </select>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Item NUmber" 
+                    [(ngModel)]="itemNumber" name="itemNumber">
                     <label for="floatingInput" class="floatingLabel">Item Number</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Item Name"
+                    [(ngModel)]="itemName" name="itemName">
                     <label for="floatingInput" class="floatingLabel">Item Name</label>
                 </div>
             </div>
             <div class="col-lg-3 margin">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        name="description"></textarea>
-                    <label for="floatingTextarea">Unit</label>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Item Name"
+                    [(ngModel)]="unit" name="unit">
+                    <label for="floatingInput" class="floatingLabel">Unit</label>
                 </div>
             </div>
         </div> <br>
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Make"
+                    [(ngModel)]="make" name="make">
                     <label for="floatingInput" class="floatingLabel">Make</label>
                 </div>
             </div>
             <div class="col-lg-3 margin">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        name="description"></textarea>
+                     [(ngModel)]="description"   name="description"></textarea>
                     <label for="floatingTextarea">Item Description</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        name="description"></textarea>
+                      [(ngModel)]="price"  name="price"></textarea>
                     <label for="floatingTextarea">Price</label>
                 </div>
             </div>
@@ -68,7 +70,8 @@
         <div class="row">
             <div class="col-lg-10"></div>
             <div class="col-lg-1">
-                <button type="button" class="save">Save</button>
+                <button type="button" class="save" (click)="insertdetails()" *ngIf="id==undefined">Save</button>
+                <button type="button" class="save" (click)="updatedetails()" *ngIf="id!=undefined">Update</button>
             </div>
             <div class="col-lg-1">
                 <button type="button" class="save" routerLink="/Admin/ItemDashboard">Back</button>
