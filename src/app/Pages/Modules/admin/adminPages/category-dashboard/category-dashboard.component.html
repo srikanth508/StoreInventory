@@ -22,7 +22,16 @@
                         <th>Category Description</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
+                    <tr *ngFor="let details of categorylist">
+                        <td>{{details.categoryCode}}</td>
+                        <td>{{details.categoryName}}</td>
+                        <td>{{details.description}}</td>
+                        <td>
+                          <button class="save" (click)="edit(details.id)">Edit</button>&nbsp;&nbsp;
+                          <button class="save" (click)="delete(details.id)">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- <tr>
                         <td>001</td>
                         <td>Electric</td>
                         <td>This is the most common type of transformer, widely used in electric power transmission and
@@ -42,54 +51,6 @@
                             voltages or currents. The primary winding of the transformer is connected to the high
                             voltage or high current circuit, and the meter or relay is connected to the secondary
                             circuit.</td>
-                        <td>
-                            <button class="save1">Edit</button><br> &nbsp;
-                            <button class="save1">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td>003</td>
-                        <td>RF Transformer</td>
-                        <td>These are used for high frequency work. The lack of a core means very low inductance. All
-                            current excites current and induces secondary voltage which is proportional to the mutual
-                            inductance.[19] Such transformers may be nothing more than a few turns of wire soldered onto
-                            a printed circuit board</td>
-                        <td>
-                            <button class="save1">Edit</button><br> &nbsp;
-                            <button class="save1">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>004</td>
-                        <td>Voltage Transformer</td>
-                        <td> Isolation Voltage:2500 Vrms for 1 minute.
-                            Dielectric Resistance:1000 M Ohms @ 500 Vdc
-                        </td>
-                        <td>
-                            <button class="save1">Edit</button><br> &nbsp;
-                            <button class="save1">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>005</td>
-                        <td>Limit Switch</td>
-                        <td>A limit switch is an electromechanical device operated by a physical force applied to it by
-                            an object.
-                            Limit switches are used to detect the presence or absence of an object
-                        </td>
-                        <td>
-                            <button class="save1">Edit</button><br> &nbsp;
-                            <button class="save1">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>006</td>
-                        <td>Test Switch</td>
-                        <td>A test switch may be used where testing relays or instruments would otherwise require manual
-                            disconnection and shorting of the instrument transformer's secondary or control wiring. It
-                            may also well be used in the testing of complete relay systems, even when each individual
-                            relay has its own test switch
-                        </td>
                         <td>
                             <button class="save1">Edit</button><br> &nbsp;
                             <button class="save1">Delete</button>

@@ -43,35 +43,26 @@
                         <th>PO Date</th>
                         <th>Requisitioner</th>
                         <th>Job Reference No </th>
-                        <!-- <th>Trasport Type</th>
-                        <th>Vendor</th>
-                        <th>Delivery Location</th>
-                        <th>Payment Terms</th> -->
-                        <!-- <th>Approver 1</th>
-                        <th>Approver 2</th> -->
                         <th>Actions</th>
                     </tr>
-                    <tr>
+                    <tr *ngFor="let details of projectlist">
+                        <td>{{details.projectName}}</td>
+                        <td>{{details.date}}</td>
+                        <td>{{details.requisitionNumber}}</td>
+                        <td>{{details.jobReferenceNumber}}</td>
+                        <td>
+                            <button class="save1" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Items</button><br>
+                        </td>
+                   </tr>
+                    <!-- <tr>
                         <td>EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</td>
                         <td>14-06-2022</td>
                         <td>Amaze</td>
                         <td>PO1293930</td>
-                        <!-- <td>Road</td>
-                        <td>Perfect Oilfield Industrial Supply LLC</td>
-                        <td>CCTV Mussafah Store</td>
-                        <td>60 Days</td> -->
-                        <!-- <td>Sojan
-                            <label style="color:green">Approved</label>
-                        </td>
-                        <td>Jomson
-                            <label style="color:red">Pending</label>
-                        </td> -->
                         <td>
                             <button class="save1" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">Items</button><br>
-                            <!-- <button class="accept" data-bs-toggle="modal">Accept</button><br>
-                            <button class="reject" data-bs-toggle="modal">Reject</button> -->
-
                         </td>
                     </tr>
 
@@ -80,22 +71,9 @@
                         <td>14-06-2022</td>
                         <td>Amaze</td>
                         <td>PO1293930</td>
-                        <!-- <td>By Rail</td>
-                        <td>Perfect Oilfield Industrial Supply LLC</td>
-                        <td>CCTV Mussafah Store</td>
-                        <td>60 Days</td> -->
-                        <!-- <td>Sojan
-                            <label style="color:green">Approved</label>
-                        </td>
-                        <td>Jomson
-                            <label style="color:red">Pending</label>
-                        </td> -->
                         <td>
                             <button class="save1" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">Items</button><br>
-                            <!-- <button class="accept" data-bs-toggle="modal">Accept</button><br>
-                            <button class="reject" data-bs-toggle="modal">Reject</button> -->
-
                         </td>
                     </tr>
 
@@ -104,22 +82,9 @@
                         <td>14-06-2022</td>
                         <td>Amaze</td>
                         <td>PO1293930</td>
-                        <!-- <td>By Air</td>
-                        <td>Perfect Oilfield Industrial Supply LLC</td>
-                        <td>CCTV Mussafah Store</td>
-                        <td>60 Days</td> -->
-                        <!-- <td>Sojan
-                            <label style="color:green">Approved</label>
-                        </td>
-                        <td>Jomson
-                            <label style="color:red">Pending</label>
-                        </td> -->
                         <td>
                             <button class="save1" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">Items</button><br>
-                            <!-- <button class="accept" data-bs-toggle="modal">Accept</button><br>
-                            <button class="reject" data-bs-toggle="modal">Reject</button> -->
-
                         </td>
                     </tr>
 
@@ -128,24 +93,11 @@
                         <td>14-06-2022</td>
                         <td>Amaze</td>
                         <td>PO1293930</td>
-                        <!-- <td>Road</td>
-                        <td>Perfect Oilfield Industrial Supply LLC</td>
-                        <td>CCTV Mussafah Store</td>
-                        <td>60 Days</td> -->
-                        <!-- <td>Sojan
-                            <label style="color:green">Approved</label>
-                        </td>
-                        <td>Jomson
-                            <label style="color:red">Pending</label>
-                        </td> -->
                         <td>
                             <button class="save1" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">Items</button><br>
-                            <!-- <button class="accept" data-bs-toggle="modal">Accept</button><br>
-                            <button class="reject" data-bs-toggle="modal">Reject</button> -->
-
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
@@ -173,11 +125,8 @@
                                 <th>Item Name/Description</th>
                                 <th>Unit</th>
                                 <th>Actual Quantity</th>
-                                <!-- <th>Unit Price</th>
-                                <th>Total Price</th> -->
                                 <th>Received Quantity</th>
-                                <th>Remarks</th>
-                             
+                                <th>Remarks</th>    
                             </tr>
                             <tr>
                                 <td>
@@ -187,8 +136,6 @@
                                 <td>Wires : [1SQM GREY]</td>
                                 <td>RLS</td>
                                 <td>2</td>
-                                <!-- <td>93.00 AED</td>
-                                <td>186.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -205,8 +152,6 @@
                                 <td>Wires : [1SQM RED]</td>
                                 <td>RLS</td>
                                 <td>2</td>
-                                <!-- <td>82.00 AED</td>
-                                <td>164.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -223,8 +168,6 @@
                                 <td>Wires : [1SQM BLACK]</td>
                                 <td>RLS</td>
                                 <td>1</td>
-                                <!-- <td>48.00 AED</td>
-                                <td>48.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -241,8 +184,6 @@
                                 <td>Ferrules;[SLEEVES,WHITE 1SQM]</td>
                                 <td>RLS</td>
                                 <td>3</td>
-                                <!-- <td>56.00 AED</td>
-                                <td>168.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -259,8 +200,6 @@
                                 <td>Rail,Base DIN;[35MM 2MTR]</td>
                                 <td>NOS</td>
                                 <td>2</td>
-                                <!-- <td>42.00 AED</td>
-                                <td>84.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -277,8 +216,6 @@
                                 <td>Wrap;[SPIRAL-WHITE 1"-24MM]</td>
                                 <td>MTR</td>
                                 <td>1</td>
-                                <!-- <td>125.00 AED</td>
-                                <td>125.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
@@ -297,15 +234,12 @@
                                     MTR  
                                 </td>
                                 <td>2</td>
-                                <!-- <td>125.00 AED</td>
-                                <td>250.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>
                                 <td>
                                     <input type="text" class="form-control" placeholder="Remarks">
-                                </td>
-                               
+                                </td>                             
                             </tr>
                             <tr>
                                 <td>
@@ -315,8 +249,6 @@
                                 <td>Wrap;[SPIRAL-WHITE 1-1/2"-12MM]</td>
                                 <td>MTR</td>
                                 <td>2</td>
-                                <!-- <td>125.00 AED</td>
-                                <td>250.00 AED</td> -->
                                 <td>
                                     <input type="text" class="form-control" placeholder="Received Quantity">
                                 </td>

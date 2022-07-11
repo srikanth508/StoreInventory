@@ -24,6 +24,7 @@ import { DamagedItemsComponent } from 'src/app/StoreManager/damaged-items/damage
 import { ProjectPosComponent } from 'src/app/StoreManager/project-pos/project-pos.component';
 import { NewprojectindentpmdashComponent } from '../../ProjectCordinator/newprojectindentpmdash/newprojectindentpmdash.component';
 import { NewprojectindentpmComponent } from '../../ProjectCordinator/newprojectindentpm/newprojectindentpm.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -57,6 +58,7 @@ import { NewprojectindentpmComponent } from '../../ProjectCordinator/newprojecti
     CommonModule,
     ProjectCordinatorRoutingModule,
     NgxDropzoneModule,
+    SharedModule
   
   ]
 })

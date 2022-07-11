@@ -12,25 +12,29 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Authozitaion Code" 
+                    [(ngModel)]="authorizationCode" name="authorizationCode">
                     <label for="floatingInput" class="floatingLabel">Authozitaion Code</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Authozitaion Name"
+                    [(ngModel)]="authorizationName" name="authorizationName">
                     <label for="floatingInput" class="floatingLabel">Authozitaion Name</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Department"
+                    [(ngModel)]="depatment" name="depatment">
                     <label for="floatingInput" class="floatingLabel">Department</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Email ID"
+                    [(ngModel)]="emailID" name="emailID">
                     <label for="floatingInput" class="floatingLabel">Email ID</label>
                 </div>
             </div>
@@ -38,7 +42,8 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Phone Number"
+                    [(ngModel)]="phoneNumber" name="phoneNumber">
                     <label for="floatingInput" class="floatingLabel">Phone Number</label>
                 </div>
             </div>
@@ -46,7 +51,8 @@
         <div class="row">
             <div class="col-lg-10"></div>
             <div class="col-lg-1">
-                <button type="button" class="save">Save</button>
+                <button type="button" class="save" (click)="insertdetails()" *ngIf="id==undefined">Save</button>
+                <button type="button" class="save" (click)="updatedetails()" *ngIf="id!=undefined">Update</button>
             </div>
             <div class="col-lg-1">
                 <button type="button" class="save" routerLink="/Admin/AuthorizationDashboard">Back</button>

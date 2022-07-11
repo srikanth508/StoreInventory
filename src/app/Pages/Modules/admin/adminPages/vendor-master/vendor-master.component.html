@@ -11,39 +11,43 @@
         <div class="row">
             <div class="col-lg-3 margin">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Vendor Name"
+                    [(ngModel)]="vendorName" name="vendorName">
                     <label for="floatingInput" class="floatingLabel">Vendor Name</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Vendor Contact Person Name"
+                    [(ngModel)]="vendorContactPersonName" name="vendorContactPersonName"> 
                     <label for="floatingInput" class="floatingLabel">Vendor Contact Person Name </label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Vendor Contact Person Number"
+                    [(ngModel)]="vendorContactPersonNumber" name="vendorContactPersonNumber">
                     <label for="floatingInput" class="floatingLabel">Vendor Contact Person Number</label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                    <label for="floatingInput" class="floatingLabel">Fax Number </label>
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Email"
+                    [(ngModel)]="emailID" name="emailID">
+                    <label for="floatingInput" class="floatingLabel">Email </label>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                    <label for="floatingInput" class="floatingLabel">Email </label>
+                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Fax Number"
+                    [(ngModel)]="faxNumber" name="faxNumber">
+                    <label for="floatingInput" class="floatingLabel">Fax Number </label>
                 </div>
-            </div>
-            
-            <div class="col-lg-3 margin">
+            </div>  
+            <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        name="description"></textarea>
+                    [(ngModel)]="address"  name="address"></textarea>
                     <label for="floatingTextarea">Address</label>
                 </div>
             </div>
@@ -52,10 +56,11 @@
         <div class="row">
             <div class="col-lg-10"></div>
             <div class="col-lg-1">
-                <button type="button" class="save">Save</button>
+                <button type="button" class="save" (click)="insertdetails()" *ngIf="id==undefined">Save</button>
+                <button type="button" class="save" (click)="updatedetails()" *ngIf="id!=undefined">Update</button>
             </div>
             <div class="col-lg-1">
-                <button type="button" class="save" routerLink="/Admin/VendorDashboard">Back</button>
+                <button type="button" class="save" routerLink="/Admin/VendorDashboard/">Back</button>
             </div>
         </div>
         <br>

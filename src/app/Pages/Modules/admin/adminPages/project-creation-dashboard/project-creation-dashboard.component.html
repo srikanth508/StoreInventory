@@ -23,7 +23,17 @@
                         <th>Description</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
+                    <tr *ngFor="let details of projectlist">
+                        <td>{{details.projectNumber}}</td>
+                        <td>{{details.projectName}}</td>
+                        <td>{{details.clientName}}</td>
+                        <td>{{details.description}}</td>
+                        <td>
+                            <button class="save1" (click)="edit(details.id)">Edit</button>&nbsp;&nbsp;
+                            <button class="save1" (click)="delete(details.id)">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- <tr>
                         <td>001121</td>
                         <td>EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</td>
                         <td>Haripriya Anoop</td>
@@ -45,7 +55,7 @@
                         <td>Mr.John</td>
                         <td>The Morocco-UK power project is expected to supply 3.6GW of clean energy from Morocco to the UK.</td>
                         <td><button class="save1">Edit</button></td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
