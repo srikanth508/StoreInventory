@@ -22,7 +22,7 @@
                         <th>Category Description</th>
                         <th>Actions</th>
                     </tr>
-                    <tr *ngFor="let details of categorylist">
+                    <!-- <tr *ngFor="let details of categorylist">
                         <td>{{details.categoryCode}}</td>
                         <td>{{details.categoryName}}</td>
                         <td>{{details.description}}</td>
@@ -30,8 +30,8 @@
                           <button class="save" (click)="edit(details.id)">Edit</button>&nbsp;&nbsp;
                           <button class="save" (click)="delete(details.id)">Delete</button>
                         </td>
-                    </tr>
-                    <!-- <tr>
+                    </tr> -->
+                    <tr>
                         <td>001</td>
                         <td>Electric</td>
                         <td>This is the most common type of transformer, widely used in electric power transmission and
@@ -55,7 +55,7 @@
                             <button class="save1">Edit</button><br> &nbsp;
                             <button class="save1">Delete</button>
                         </td>
-                    </tr> -->
+                    </tr>
                 </table>
             </div>
         </div>

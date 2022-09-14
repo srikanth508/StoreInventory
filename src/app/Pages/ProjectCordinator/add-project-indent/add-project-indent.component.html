@@ -70,51 +70,9 @@
       </div>
     </div>
     <br />
-    <div class="row">
-      <!-- <div class="col-lg-3 ">
-    <br>
-    <div class="card">
+    
         <div class="row">
-            <div class="col-lg-3 ">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Requisition Number"
-                    [(ngModel)]="requisitionNumber" name="requisitionNumber">
-                    <label for="floatingInput" class="floatingLabel">Requisition Number</label>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Reference Number"
-                    [(ngModel)]="referenceNumber" name="referenceNumber">
-                    <label for="floatingInput" class="floatingLabel">Reference Number</label>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Job Reference No"
-                    [(ngModel)]="jobReferenceNumber" name="jobReferenceNumber">
-                    <label for="floatingInput" class="floatingLabel">Job Reference No</label>
-                </div>
-            </div>
-            <div class="col-lg-3 ">
-                <select class="form-control" (change)="GetProjectID($event)" [(ngModel)]="projectid" name="projectid">
-                    <option value="0">Select Project</option>
-                    <option *ngFor="let details of projectlist" value="{{details.id}}">{{details.projectName}}</option>
-                    <!-- <option value="1">EPC For Permanent Power Supply for JEBEL DHANA PUMPING STATION</option>
-                    <option value="2">Combined-cycle gas turbine (CCGT) power plant</option>
-                    <option value="3">Integrated solar and wind power generation</option> -->
-                </select>
-            </div>
-        </div> <br>
-        <div class="row">
-            <!-- <div class="col-lg-3 ">
-                <select class="form-control">
-                    <option>Select Vendor</option>
-                    <option>Perfect Oilfield Industrial Supply LLC</option>
-                    <option>Sabana Traders LLC</option>
-                    <option>Triveni Packaging Equipment Trading Co. LLC</option>
-                </select>
-            </div> -->
+
       <div class="col-lg-3">
         <input type="date" class="form-control" />
       </div>
@@ -135,14 +93,26 @@
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"
           />
-          <!-- <span class="input-group-text search" id="basic-addon2" >Search</span> -->
-        </div>
-        <!-- <div class="form-floating mb-3">
-                    <input type="text" class="form-control inputfield" id="floatingInput" placeholder="Category Code">
-                    <label for="floatingInput" class="floatingLabel">Item Number</label>
-                </div> -->
+          
+   
       </div>
+    </div>
       <div class="col-lg-3">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Quantity"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <span class="input-group-text search" id="basic-addon2">Add</span>
+            
+            
+        </div>
+      
+
+      <!-- <div class="col-lg-3">
         <div class="input-group mb-3">
           <input
             type="text"
@@ -156,34 +126,15 @@
                 <input type="date" class="form-control" [(ngModel)]="date" name="date">
             </div>
 
-            <div class="col-lg-3">
-                <select class="form-control" (change)="GetcategoryID($event)" [(ngModel)]="categoryid" name="categoryid" >
-                    <option value="0">Select Category</option>
-                    <option *ngFor="let details of categorylist" value="{{details.id}}">{{details.categoryName}}</option>
-                   <!-- <option>Electric</option>
-                   <option>Electronic</option> -->
-                </select>
-            </div>
-            <div class="col-lg-3 ">
-
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Item Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
-               
-                  </div>
-           
-            </div>
+            
         </div>
 
-      </div>
+      </div> -->
     </div>
-    <!-- <div class="row">
-            <div class="col-lg-10"></div>
-            <div class="col-lg-2">
-                    <button class="save">Search</button>
-            </div>
-        </div> -->
-
+    
+  
     <br />
+  </div>
     <div class="row">
       <div class="col-lg-12">
         <table class="table table-hover">
@@ -194,7 +145,7 @@
             <th>Quantity</th>
             <!-- <th>Unit Price</th>
                         <th>Total Price</th> -->
-            <!-- <th>Actions</th> -->
+            <th>Actions</th>
           </tr>
           <tr>
             <td>P1I720265(P1J564100)</td>
@@ -203,9 +154,9 @@
             <td>1</td>
             <!-- <td>2.00</td>
                         <td>2.00</td> -->
-            <!-- <td>
+            <td>
                             <button class="save1" (click)="showdash()">Add</button>
-                        </td> -->
+                        </td>
           </tr>
 
           <tr>
@@ -215,9 +166,9 @@
             <td>2</td>
             <!-- <td>2.00</td>
                         <td>4.00</td> -->
-            <!-- <td>
+            <td>
                             <button class="save1"  (click)="showdash()">Add</button>
-                        </td> -->
+                        </td>
           </tr>
         </table>
       </div>
@@ -237,46 +188,8 @@
       </div>
     <div class="col-lg-3">
         <br>
-        <div class="row">
-            <div class="col-lg-12">
-                <table class="table table-hover">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name/Description</th>
-                        <th>Quantity</th>
-                    </tr>
-                    <tr *ngFor="let details of itemlist">
-                        <td>{{details.itemNumber}}</td>
-                        <td>{{details.itemName}}</td>
-                        <td>
-                            <input type="text" class="form-control" placeholder="Quantity">
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td>P1I720265(P1J564100)</td>
-                        <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
-                        <td>1</td>
-                    </tr>
-
-                    <tr>
-                        <td>P1I720265(P1J564100)</td>
-                        <td>BUS COUPLER PROTECTION RELAY 7SJ82 </td>
-                        <td>2</td>
-                    </tr> -->
-                </table>
-            </div>
-
-        </div><br>
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                        style="height: 100px" [(ngModel)]="generalTerms" name="generalTerms"></textarea>
-                    <label for="floatingTextarea2">General Terms</label>
-                </div>
-            </div>
-           
-        </div><br>
+      
+       
             <!-- <div class="col-lg-3">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
@@ -327,70 +240,11 @@
         </div>
         <br> -->
 
-    <div class="row">
-      <div class="col-lg-10"></div>
-      <div class="col-lg-1">
-        <button type="button" class="save">Save</button>
-      </div>
-      <div class="col-lg-1">
-        <button type="button" class="save" routerLink="/projectCordinator">
-          Back
-        </button>
-      </div>
+ 
      
-        <div class="row">
-            <div class="col-lg-10"></div>
-            <div class="col-lg-1">
-                <button type="button" class="save" (click)="insertdetails()">Save</button>
-            </div>
-            <div class="col-lg-1">
-                <button type="button" class="save" routerLink="/projectCordinator">Back</button>
-            </div>
-        </div>
-        <br>
+    
 
-        <div class="row" *ngIf="showdashboard==1">
-            <h5>Added Items</h5>
-            <div class="col-lg-12">
-                <table class="table table-hover">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name/Description</th>
-                        <th>Unit</th>
-                        <th>Quantity</th>
-                        <th>Unit Price</th>
-                        <th>Total Price</th>
-                        <!-- <th>Actions</th> -->
-                    </tr>
-                    <tr>
-                        <td>P1I720265(P1J564100)</td>
-                        <td>MAIN INCOMER PROTECTION RELAY 7SJ82</td>
-                        <td>RLS</td>
-                        <td>1</td>
-                        <td>2.00</td>
-                        <td>2.00</td>
-                        <!-- <td>
-                            <button class="save1">Add</button>
-                        </td> -->
-                    </tr>
-
-                    <tr>
-                        <td>P1I720265(P1J564100)</td>
-                        <td>BUS COUPLER PROTECTION RELAY 7SJ82 </td>
-                        <td>RLS</td>
-                        <td>2</td>
-                        <td>2.00</td>
-                        <td>4.00</td>
-                        <!-- <td>
-                            <button class="save1">Add</button>
-                        </td> -->
-                    </tr>
-                </table>
-            </div>
-
-        </div><br>
->>>>>>> 08f2457a1420599628d76a755b8f48772667b295
-    </div>
+   
     <br />
 
     <div class="row" *ngIf="showdashboard == 1">
@@ -432,13 +286,25 @@
         </table>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-10"></div>
+      <div class="col-lg-1">
+        <button type="button" class="save">Save</button>
+      </div>
+      <div class="col-lg-1">
+        <button type="button" class="save" routerLink="/projectCordinator">
+          Back
+        </button>
+      </div>
     <br />
   </div>
   <br />
 </div>
 
+
 <!-- Button trigger modal -->
-<div
+<!-- <div
   class="modal fade"
   id="importItems"
   data-bs-backdrop="static"
@@ -476,4 +342,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
